@@ -1,0 +1,36 @@
+<div class="mpl-ajax-loader" [ngClass]="config.classNames" *ngIf="canShow===true">
+  <div class="backdrop"></div>
+
+  <div class="loader-wrapper">
+
+      <span class="close-icon" (click)="close($event)"
+          *ngIf="requestStates.PROGRESS !== currentState">x</span>
+      
+
+      <span [ngSwitch]="currentState">
+
+      <div *ngSwitchCase="requestStates.PROGRESS" >
+          <!-- progress content -->
+          <div [innerHtml]="config.template.progress"></div>
+      </div>
+
+      <div *ngSwitchCase="requestStates.ERROR">
+          <!-- error content -->
+          <div [innerHtml]="config.template.error"></div>
+      </div>
+
+      <div *ngSwitchCase="requestStates.CANCELED">
+          <!-- cancel content -->
+          <div [innerHtml]="config.template.cancelled"></div>
+      </div>
+
+      <div *ngSwitchCase="requestStates.SUCCESS">
+          <!-- success content -->
+          <div [innerHtml]="config.template.success"></div>
+      </div>
+      </span>        
+
+      
+  </div>
+
+</div>

@@ -18,6 +18,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "mpl-ajax-loader": [
+        "dist/mpl-ajax-loader"
+      ],
+      "mpl-ajax-loader/*": [
+        "dist/mpl-ajax-loader/*"
+      ]
+    }
   }
 }

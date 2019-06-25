@@ -1,0 +1,12 @@
+{
+  "name": "mpl-ajax-loader",
+  "version": "0.0.1",
+  "description": "Loader component for API calls",
+  "author": "Manohar Palem <manoharpalem.123@gmail.com>",
+  "keywords": ["loader", "progress", "ng loader"],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^8.0.1",
+    "@angular/core": "^8.0.1"
+  }
+}

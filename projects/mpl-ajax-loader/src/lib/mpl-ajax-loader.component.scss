@@ -1,0 +1,74 @@
+.mpl-ajax-loader {
+    min-width: 150px;
+    min-height: 100px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-family: monospace;
+
+    .pos-abs {
+        position: absolute;
+    }
+
+    .pos-rel {
+        position: relative;
+    }
+
+    .v-center {
+        top: 50%;
+        transform: translateY(-50%)
+    }
+
+    .h-center {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .backdrop {
+        height: 100%;
+        width: 100%;
+        opacity: 0.2;
+        position: relative;
+        background: #dddddd;
+    }
+
+    .loader-wrapper {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .progress, .error, .success {
+        width: 90%;
+        text-align: center;
+    }
+
+    .progress {
+        color: #d8890f
+    }
+
+    .error, .cencelled {
+        color: #ec1414;
+    }
+    
+    .success {
+        color: #32771c;
+    }
+
+    .close-icon {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        font-family: monospace;
+    }
+
+    .close-icon:active {
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+}

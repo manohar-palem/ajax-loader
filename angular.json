@@ -119,6 +119,41 @@
           }
         }
       }
+    },
+    "MplAjaxLoader": {
+      "projectType": "library",
+      "root": "projects/mpl-ajax-loader",
+      "sourceRoot": "projects/mpl-ajax-loader/src",
+      "prefix": "mpl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mpl-ajax-loader/tsconfig.lib.json",
+            "project": "projects/mpl-ajax-loader/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mpl-ajax-loader/src/test.ts",
+            "tsConfig": "projects/mpl-ajax-loader/tsconfig.spec.json",
+            "karmaConfig": "projects/mpl-ajax-loader/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mpl-ajax-loader/tsconfig.lib.json",
+              "projects/mpl-ajax-loader/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ajax-loader"
 }
